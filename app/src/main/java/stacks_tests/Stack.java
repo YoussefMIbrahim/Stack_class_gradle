@@ -31,7 +31,7 @@ public class Stack<E> {
     public void push(E i){
 
         if(top == array.length -1 ){
-            //throw exception
+           throw new FullStackException("The stack is full. ");
         }
 
         top = top + 1 ;
@@ -43,7 +43,7 @@ public class Stack<E> {
     public E pop(){
 
         if(top == -1){
-            //exceptoion stack is empty
+            throw new EmptyStackException("The Stack is empty. ");
         }
 
         E item = array[top];
@@ -58,7 +58,7 @@ public class Stack<E> {
     public E peek(){
 
         if(top == -1){
-            //exceptoion stack is empty
+            throw new EmptyStackException("The Stack is empty. ");
         }
 
   
